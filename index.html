@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webtoon Library - Explore Popular Webtoons</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <div class="toggle-dark-mode">
+    <label for="dark-mode-switch">Dark Mode</label>
+    <input type="checkbox" id="dark-mode-switch" onclick="toggleDarkMode()">
+  </div>
+
+  <header>
+    <div class="container">
+      <h1>Webtoon Library</h1>
+      <nav>
+        <a href="#home-section" id="nav-home">Home</a>
+        <a href="#my-library-section">My Library</a>
+        <a href="#genres-section">Genres</a>
+        <a href="#top-webtoons-section">Top Webtoons</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner Section -->
+  <section id="banner">
+    <img src="images/marvelous.png" alt="Webtoon Banner" />
+  </section>
+
+  <main class="container">
+    <!-- Romantic Section -->
+    <section id="romantic-section" class="webtoon-list">
+      <h2>Romantic Webtoons</h2>
+      <div class="webtoon-row">
+        <div class="webtoon-item">
+          <img src="images/fourt.jpg" alt="Romantic Webtoon 1">
+          <h3>Romantic Title 1</h3>
+          <p>A brief romantic description.</p>
+          <button>Save to My Library</button>
+        </div>
+        <div class="webtoon-item">
+          <img src="images/home.jpg" alt="Romantic Webtoon 2">
+          <h3>Romantic Title 2</h3>
+          <p>A brief romantic description.</p>
+          <button>Save to My Library</button>
+        </div>
+        <div class="webtoon-item">
+          <img src="images/marvelous.png" alt="Romantic Webtoon 3">
+          <h3>Romantic Title 3</h3>
+          <p>A brief romantic description.</p>
+          <button>Save to My Library</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comedy Section -->
+    <section id="comedy-section" class="webtoon-list">
+      <h2>Comedy Webtoons</h2>
+      <div class="webtoon-row">
+        <div class="webtoon-item">
+          <img src="images/first.jpg" alt="Comedy Webtoon 1">
+          <h3>Comedy Title 1</h3>
+          <p>A brief comedy description.</p>
+          <button>Save to My Library</button>
+        </div>
+        <div class="webtoon-item">
+          <img src="images/boom.png" alt="Comedy Webtoon 2">
+          <h3>Comedy Title 2</h3>
+          <p>A brief comedy description.</p>
+          <button>Save to My Library</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fantasy Section -->
+    <section id="fantasy-section" class="webtoon-list">
+      <h2>Fantasy Webtoons</h2>
+      <div class="webtoon-row">
+        <div class="webtoon-item">
+          <img src="images/second.jpg" alt="Fantasy Webtoon 1">
+          <h3>Fantasy Title 1</h3>
+          <p>A brief fantasy description.</p>
+          <button>Save to My Library</button>
+        </div>
+        <div class="webtoon-item">
+          <img src="images/third.jpg" alt="Fantasy Webtoon 2">
+          <h3>Fantasy Title 2</h3>
+          <p>A brief fantasy description.</p>
+          <button>Save to My Library</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Action Section -->
+    <section id="action-section" class="webtoon-list">
+      <h2>Action Webtoons</h2>
+      <div class="webtoon-row">
+        <div class="webtoon-item">
+          <img src="images/Boyfriends.jpg" alt="Action Webtoon 1">
+          <h3>Action Title 1</h3>
+          <p>A brief action description.</p>
+          <button>Save to My Library</button>
+        </div>
+        <div class="webtoon-item">
+          <img src="images/home.jpg" alt="Action Webtoon 2">
+          <h3>Action Title 2</h3>
+          <p>A brief action description.</p>
+          <button>Save to My Library</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comment Section -->
+    <section id="comment-section">
+      <h2>Leave a Comment</h2>
+      <form id="comment-form" onsubmit="handleCommentSubmit(event)">
+        <label for="comment-text">Your Comment:</label>
+        <textarea id="comment-text" rows="4" cols="50" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+
+      <h3>Comments:</h3>
+      <div id="comments-container"></div>
+    </section>
+  </main>
+
+  <!-- Webtoon Detail Modal -->
+  <div id="webtoon-detail-modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" onclick="closeWebtoonDetail()">&times;</span>
+      <img id="modal-image" alt="">
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
